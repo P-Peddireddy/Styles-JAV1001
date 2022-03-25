@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:background="#0079D6"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Team Name"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Score"
+                    android:textColor="@color/white" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#DAE8FC"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/CustomTextviewStyle"
+                    android:layout_weight="1"
+                    android:text="Team A" />
+
+                <TextView
+                    android:id="@+id/tv_team_a_score"
+                    style="@style/CustomTextviewStyle"
+                    android:layout_weight="1"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:background="#DAE8FC"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/CustomTextviewStyle"
+                    android:layout_weight="1"
+                    android:text="Team B" />
+
+                <TextView
+                    android:id="@+id/tv_team_b_score"
+                    style="@style/CustomTextviewStyle"
+                    android:layout_weight="1"
+                    android:text="0" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            style="@style/CustomTextviewStyle"
+            android:layout_marginTop="30dp"
+            android:text="Select Game : "
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGameGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioCricket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Cricket"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioBasketball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Basket Ball"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioAmericanFB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="American Foot Ball"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CustomTextviewStyle"
+                android:text="Select Game Scores :"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_game_scores"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/CustomTextviewStyle"
+            android:layout_marginTop="30dp"
+            android:text="Select Team : "
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioTeamGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioTeamA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Team A"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioTeamB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Team B"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CustomTextviewStyle"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Update Scores: "
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnMinus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:text="+"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_winner"
+            style="@style/CustomButtonStyle"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="Who Won!!" />
+    </LinearLayout>
+</ScrollView>
